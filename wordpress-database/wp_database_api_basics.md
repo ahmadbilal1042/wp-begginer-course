@@ -38,3 +38,16 @@ wp_term_relationships
 wp_term_taxonomy
 
 these all belongs to tags and categories
+
+
+wp_options
+
+save data about your website settings
+each row in this table shows a different setting
+
+
+options api is used all along with the settings api to create settigns in admin view thorugh plugin or themse calls
+
+
+Being able to correctly identify and interact with the tables in a WordPress database is an extremely useful skill, and will help you to better understand how WordPress works when you are developing with WordPress.
+
