@@ -1,0 +1,1 @@
+shows signup page for a new site for a multisite

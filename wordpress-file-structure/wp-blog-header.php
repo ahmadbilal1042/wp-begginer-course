@@ -1,0 +1,1 @@
+it includes wp-load.php

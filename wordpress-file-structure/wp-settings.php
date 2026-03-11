@@ -1,0 +1,1 @@
+sets up the core wordpress functionality

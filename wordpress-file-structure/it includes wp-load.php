@@ -1,0 +1,1 @@
+# it inclused wp-config.php file
