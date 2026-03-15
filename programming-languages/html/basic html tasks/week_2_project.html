@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Project</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 0px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .posts {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid;
+            margin: 0 10%;
+            border-radius: 10px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        aside {
+            float: right;
+            height: 180px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            border: 1px solid black;
+            margin-left: 10px;
+            border-radius: 8px;
+            padding-top: 20px;
+        }
+
+        footer {}
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" width="100">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Projects</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <p>Sidebar</p>
+        </aside>
+        <h1 style="text-align: center;">Our Blogs</h1>
+        <section class="hero">
+            <h2 style="text-align: center;">
+                Posts
+            </h2>
+            <div class="posts">
+                <article>
+                    <h3>Post 1 Title</h3>
+                    <p>Post 1 Description</p>
+                </article>
+                <article>
+                    <h3>Post 2 Title</h3>
+                    <p>Post 2 Description</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="images/logo.png" alt="logo" width="100">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+
+    <!-- BUILD: Full semantic blog page — header, nav, main with 2 articles, aside, footer. Validate. -->
+</body>
+
+</html>

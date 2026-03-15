@@ -1,11 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 2</title>
+    <style>
+        header nav ul,
+        footer nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: palevioletred;
+        }
+
+        header,
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .post {
+            border: 1px solid;
+            padding: 20px;
+            display: flex;
+            justify-self: center;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        aside {
+            border: 1px solid red;
+            float: right;
+            height: 200px;
+            width: 200px;
+        }
+
+        .back-top-top {
+            position: fixed;
+            bottom: 75px;
+            right: 30px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px 0px;
+            width: 100vw;
+        }
+
+        .social-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        section {
+            width: 100vw !important;
+        }
+
+        .first-para::first-letter {
+            font-size: 34px;
+            font-weight: 900;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!-- Build a site header with logo and nav inside — use zero divs -->
+
+    <header>
+        <img src="images/logo.png" alt="logo" width="150">
+        <!-- Create nav with 5 links using ul > li > a — add aria-label='main navigation' -->
+        <nav>
+            <ul>
+                <li><a href="#" aria-label="main-navigation">Home</a></li>
+                <li><a href="#" aria-label="main-navigation">About</a></li>
+                <li><a href="#" aria-label="main-navigation">Projects</a></li>
+                <li><a href="#" aria-label="main-navigation">Careers</a></li>
+                <li><a href="#" aria-label="main-navigation">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Wrap page content in main — validate only one main exists on the page -->
+    <main>
+        <section class="hero">
+            <!-- Build full heading hierarchy (h1 once only). Style first paragraph's first letter with ::first-letter -->
+            <h1>My Website</h1>
+            <h2>Hero Section (Section 1)</h2>
+            <p class="first-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit ipsa rem totam
+                impedit neque sequi nesciunt ab ea error?</p>
+        </section>
+        <section class="services">
+            <h2>Our Services</h2>
+            <h3>SEO</h3>
+            <h3>Social Media</h3>
+            <h3>WordPress</h3>
+            <h4>Template Kits</h4>
+            <h5>Elementor</h5>
+            <h6>Elementor Free</h6>
+            <h6>Elementor Pro</h6>
+            <h5>Divi</h5>
+            <h5>Wp bakery</h5>
+            <h4>Pre-Made Themes</h4>
+            <h4>Custom Themes</h4>
+        </section>
+        <section class="book">
+            <h2>Book Our Services Now</h2>
+        </section>
+    </main>
+    <!-- Add related-links sidebar next to article using aside — position with CSS Grid -->
+    <div class="additional-content">
+        <aside>
+            <p>Sidebar</p>
+        </aside>
+
+        <article>
+            <div class="post">
+                <h3>
+                    Post Title
+                </h3>
+                <p>
+                    post description
+                </p>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <!-- Build footer with copyright, social links, back-to-top anchor -->
+        <div class="intro">
+            <img src="images/logo.png" alt="logo" width="100">
+            <p>Our Company description</p>
+            <small>
+                Copyright Saved 2026
+            </small>
+        </div>
+        <div class="social-links">
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">Youtube</a></li>
+            </ul>
+        </div>
+        <div class="adress">
+            <address>
+                <p>Adress: Johar Town Lahore</p>
+                <p>Phone: +92038332445</p>
+                <p>Email: admin@example.com</p>
+            </address>
+        </div>
+    </footer>
+    <div class="back-top-top">
+        <a href="#">To Top</a>
+    </div>
 </body>
+
 </html>
