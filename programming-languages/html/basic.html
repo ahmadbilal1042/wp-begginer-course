@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- tells browser this is an html doc, ensures it is html in all browser devices -->
+<html lang="en">
+<!-- tell the language of page -->
+
+<head>
+    <!-- head is container for metatags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta tag adds additional information about pages like og open graph used for social sharing, SEO title and SEO description -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link is used to link external resources like fonts and style sheets -->
+    <script src="script.js"></script>
+    <!-- script tag is used to add js scripts in header, most preferred method is to use js in footer or end of the body because browser reads documents from upto down so it make sure whole html is loaded properly although you can control in using event listeners -->
+    <title>HTML Basic</title>
+    <!-- title tag is used for SEO title, browser top text and when page is bookmarked -->
+    <style>
+        /* used to add additionall css in it */
+    </style>
+    <base href="folder/" target="_blank">
+    <!-- base tag is used as a base page for all relative links in the page
+     in the link shared below, the browser will try to find foler/admin.html due to base url
+     -->
+</head>
+
+<body>
+    <!-- starts the main visual content -->
+    <header>
+        <!-- sematic tag for webiste header logo anv main links navigation   -->
+        <nav>
+            <!-- semantice tag provides main navigation link -->
+            <ul>
+                <!-- shares that it is an unordered list -->
+            </ul>
+            <ol>
+                <!-- tells it is an ordered list further can be styles by list-style tag in css -->
+                <li>
+                    <!-- shows it is a list item in the list -->
+                </li>
+            </ol>
+        </nav>
+
+
+    </header>
+    <main>
+        <!-- shows main content of page -->
+        <h1>
+            <!-- headings from h1 to h6 -->
+            <!-- different heading structures used according to importance for size use CSS always -->
+            <h6>
+                <p>
+                    <!-- write paragraph content -->
+                </p>
+                <span>
+                    <!-- writing any tag inline in contarst of div -->
+                </span>
+                <div>
+                    <!-- used as a sepaaret block and it has css property of display:block by default -->
+                </div>
+                <strong>
+                    <!-- shows whats important -->
+                </strong>
+                <em>
+                    <!-- used as emphasis for quotes -->
+                </em>
+                <br>
+                <!-- used for line breaks -->
+                <hr>
+                <!-- for horizontal line display between 2 sections -->
+                <blockquote>
+                    <!-- used for citation -->
+                    <cite>
+                        <!-- inside a quote used for main title of the quote for different styling -->
+                    </cite>
+                </blockquote>
+                <code>
+                    <!-- use custom code to be displayed as -->
+                  </code>
+                <!-- <pre>used to show content as writtent as</pre> -->
+                <abbr>
+                    <!-- Used to mark abbrevations and their complete meanings -->
+                </abbr>
+                <mark>
+                    <!-- used to highlighted text with yellow bg -->
+                </mark>
+                <small>
+                    <!-- Used for small text like copyright text -->
+                </small>
+
+                <sup>
+                    <!-- used to show powers of values -->
+                </sup>
+                <sub>
+                    <!-- used to show values downside -->
+                </sub>
+                <time datetime="12-12-2000">Date is 12 December
+                    <!-- used to display time in machiene readable format -->
+                </time>
+
+                <section>
+                    <!-- This breaks each part in to different from other each must have its own h2 -->
+                    <article>
+                        <!-- used for displaying independent content which has its own value if used independently like a post or page -->
+                    </article>
+                </section>
+                <a href="admin.html">Hello
+                    <!-- used for links -->
+                </a>
+                <img>
+                <!-- used to display images -->
+                <figure>
+                    <!-- used to convert an image into an element which is expainable into its own like one image has multiple elements and on hover each elements shows its names -->
+                    <picture>
+                        <!-- it tells figure tag to taegte whihc images -->
+                    </picture>
+                </figure>
+                <video>
+                    <source>
+                    <!-- prodvides source for both audio and vide -->
+                    <!-- Used to add video and controls -->
+                </video>
+                <audio>
+                    <!-- used to add audio -->
+                </audio>
+                <iframe>
+                    <!-- display another page to our webpage like google maps -->
+                </iframe>
+                <svg>
+                    <!-- drop and svg icon directly into html ad then fill colors with css -->
+                </svg>
+                <dl>
+                    <!-- it shows a description list like definations in our text book -->
+                    <dt>
+                        <!-- Shows Main Name -->
+                    </dt>
+                    <dd>
+                        <!-- SHows description for the content  -->
+                    </dd>
+                </dl>
+                <section>
+                    <table>
+                        <caption>
+                            <!-- tells description of your tabel -->
+                        </caption>
+                        <!-- Displays a table with rows and columns -->
+                        <thead>
+                            <th>
+                                <!-- shows one column header -->
+                            </th>
+                            <!-- shows table column names -->
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <!-- shows one cell data  -->
+                                </td>
+                                <!-- shows a tble row -->
+                            </tr>
+                            <!-- shows main content items -->
+                        </tbody>
+                        <tfoot>
+                            <!-- Shows last row which include final balance type things -->
+                        </tfoot>
+                    </table>
+                </section>
+                <section>
+                    <form>
+                        <!-- shows a form like contact form -->
+                        <label>
+                            <!-- shows heading abouve an input -->
+                        </label>
+                        <input type="text">
+                        <!-- input has many types of like text mail number check bok radio andmore -->
+                        <input type="button" value="">
+                        <textarea>
+                            <!-- shows an area for message -->
+                         </textarea>
+                        <select>
+                            <!-- shows a drop down option for user -->
+
+                        </select>
+                        <button>
+                            <!-- shows a button for submission -->
+                        </button>
+                        <fieldset>
+                            <!-- used to group related elements in form -->
+                            <legend>
+                                <!-- show headig of that group in form -->
+                            </legend>
+                            <datalist>
+                                <!-- used to display a predefined values for an input to select -->
+                                <!-- id of datalist == list attribute name of input -->
+                            </datalist>
+                        </fieldset>
+                        <output>
+                            <!-- used to display result of any calculation or anything appliead by a script -->
+                        </output>
+                    </form>
+                </section>
+                <section>
+                    <data value="">
+                        <!-- used to add machiene readable value to any data -->
+                    </data>
+                </section>
+    </main>
+    <aside>
+        <!-- additional value providing content like sidebar -->
+    </aside>
+    <footer>
+        <!-- website footer with links and imp info -->
+        <address>
+            <!-- tells browser written content is this webistes adress -->
+        </address>
+    </footer>
+</body>
+
+</html>
