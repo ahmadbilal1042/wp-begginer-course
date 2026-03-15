@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Give 3 pages unique titles. Write styles in style tag then move to external CSS — compare -->
+    <title>Our Website Header</title>
+    <title>1 Our Website Header</title>
+    <title>2 Our Website Header</title>
+    <style>
+        body {
+            background-color: red;
+        }
+    </style>
+    <!-- Add the same script with defer, then async — compare execution order in console logs -->
+    <script defer src="script.js"></script>
+    <!-- when using defer it will load after html is loaded completely perfect use for DOM dependent -->
+    <script async src="script.js"></script>
+    <!-- when using async it does not wait for all html elements to be loaded completely no fixed order, HTMl parsing can be disturbed -->
+
+    <!-- Set base href to a folder path — observe how relative links resolve differently -->
+    <base href="/admin.php">
+</head>
+
+<body>
+
+</body>
+
+</html>
