@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>
+    <style>
+        .svg-cinon {
+            fill: red;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .quick-links ul li a {
+            color: rebeccapurple;
+            margin-bottom: 10px;
+        }
+
+        .quick-links ul li {
+            list-style: none;
+            display: flex;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Use picture + source to serve a wide image on desktop and a cropped square on mobile -->
+    <picture>
+        <source media="(max-width:420px )" srcset="images/logo.png">
+        <source media="(max-width: 4000px)" srcset="images/logo.png">
+        <img src="images/logo.png" alt="logo" width="100">
+    </picture>
+    <!-- Embed a video with controls, a poster image, and a fallback text message for old browsers -->
+    <!-- for youtibe video use iframe -->
+    <video src="offline video link" autoplay muted height="300" width="300" loop poster="images/logo.png" controls
+        preload="auto"></video>
+    <!-- Embed an audio file with controls — add a text transcript below for accessibility -->
+    <audio src="file.mp3" translate="yes" controls autoplay></audio>
+    <!-- Provide both mp4 and webm sources inside a video tag — test which browser picks which -->
+    <audio controls>
+        <source src="file.mp3" type="audio/mp4">
+        <source src="file.mp3" type="audio/webm">
+    </audio>
+    <!-- Embed a Google Map — add title attribute and sandbox='allow-scripts' to the iframe -->
+    <!-- title is used for accessibility, sandbox is for security and allow scripts is for javascript execution -->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3468.1614553481936!2d71.91926819999999!3d29.6280536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f42ce47407bef99%3A0x1da9b2357e1e98a3!2sWPX%20SEO%20Digital!5e0!3m2!1sen!2s!4v1773685839850!5m2!1sen!2s"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="WPX SEO Digital Location" sandbox="allow-scripts"></iframe>
+    <!-- Draw a simple icon directly in SVG inline code — change its fill color using a CSS variable -->
+    <svg class="svg-cinon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="gold"
+        stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15 10 23 10 17 14 19 22 12 17 5 22 7 14 1 10 9 10" />
+    </svg>
+    <!-- Build a navigation menu and a feature list — both using ul > li, styled differently with CSS -->
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="quick-links">
+        <ul>
+            <li><a href="#">Quick Link</a></li>
+            <li><a href="#">Quick Link</a></li>
+            <li><a href="#">Quick Link</a></li>
+        </ul>
+    </div>
+
+    <!-- Build a step-by-step tutorial list using ol — add the reversed attribute and see what changes -->
+    <!-- when reverse is used steps/item order becomes reverse -->
+    <ol reversed>
+        <li>step one
+        </li>
+        <li>step two
+        </li>
+        <li>step three
+        </li>
+        <li>step four
+        </li>
+    </ol>
+    <!-- Nest a ul inside an li to create a dropdown sub-menu structure -->
+    <ul>
+        <li>Home</li>
+        <li>Services
+            <ul class="sub-menu">
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+                <li>Service 4</li>
+            </ul>
+        </li>
+        <li>Contact</li>
+    </ul>
+</body>
+
+</html>
