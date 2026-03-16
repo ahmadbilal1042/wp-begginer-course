@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3</title>
+    <style>
+        address p {
+            margin-bottom: 40px;
+        }
+
+        span {
+            background-color: yellow;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            padding: 0px 20px;
+
+            .single-card {
+                border: 1px solid red;
+                padding: 10px;
+                border-radius: 10px;
+
+                h3,
+                p {
+                    font-family: Georgia, 'Times New Roman', Times, serif
+                }
+            }
+        }
+
+        hr {
+            width: 90vw;
+            height: 5px;
+            fill: rgb(113, 70, 4);
+            background-color: rebeccapurple;
+            transform: scaleX(1.02);
+            border-radius: 35px;
+        }
+
+        cite span {
+            font-weight: 800;
+            text-decoration: dashed;
+            text-transform: uppercase;
+            font-size: 22px;
+        }
+
+        .thee-images {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Highlight 3 keywords inside a paragraph using span + background color CSS — no div -->
+    <p>Lorem ipsum dolor sit <span> amet</span> consectetur <span>adipisicing</span> elit. Fugit <span>provident</span>
+        expedita delectus praesentium sapiente
+        cum officiis maiores veniam laborum dolor?</p>
+    <!-- Build a card layout using div — then refactor every div to a semantic tag where possible -->
+    <section class="cards">
+        <span class="single-card">
+            <h3>Service 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, nihil.</p>
+        </span>
+        <span class="single-card">
+            <h3>Service 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, nihil.</p>
+        </span>
+        <span class="single-card">
+            <h3>Service 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, nihil.</p>
+        </span>
+    </section>
+    <!-- Mark up a warning message using strong — compare how screen reader announces it vs plain text -->
+    <mark><strong>This is warning</strong></mark>
+    <!-- Emphasize a word inside a quote using em — listen to how VoiceOver reads it differently -->
+    <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident <em>praesentium vel quam neque</em>
+        perspiciatis quasi, dolor aut tempora nihil ratione.
+    </blockquote>
+    <!-- Use br inside a mailing address — then replace with CSS margin-bottom and compare result -->
+    <address>
+        Name: Ali haider <br>
+        Adress: House Number <br>
+        Phone: 7873487932br
+    </address>
+    <address>
+        <p> Name: Ali haider
+        </p>
+        <p> Adress: House Number
+        </p>
+        <p>
+            Phone: 78734879
+        </p>
+    </address>
+    <!-- Add a thematic break between two sections — style hr using CSS border property only -->
+    <section>
+        <h2>1st Section</h2>
+    </section>
+    <hr>
+    <section>
+        <h2>2nd Section</h2>
+    </section>
+    <!-- Pull a quote from an article — add cite attribute with the source URL -->
+    <blockquote>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, illo consectetur dolorum quod, assumenda,
+        fugiat repudiandae laborum quasi corrupti corporis deserunt asperiores sed facilis delectus quia iure non! Ea,
+        dolore.
+        <cite>This is referred by <a href="#">Ahmad Bilal</a> Part 1, Book 1.</cite></p>
+    </blockquote>
+    <!-- Wrap a book or film title in cite inside a blockquote — style it differently from the quote -->
+    <blockquote>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, corporis?
+        <cite>Book Title: <span>New Book Title</span></cite>
+    </blockquote>
+    <!-- Mark up a PHP function name inline with code tag inside a sentence -->
+    <p>
+        Now, we will write a PHP script for server side rendering
+    <pre> <code>
+            function PHP_function (params) {
+                // main code here
+            }
+        </code></pre>
+    </p>
+    <!-- Display a multi-line code snippet inside pre + code — style with a monospace font and dark background -->
+    <pre>
+        <code>
+            function generateRandomNumbers(count) {
+  const numbers = [];
+
+  for (let i = 0; i < count; i++) {
+    const random = Math.floor(Math.random() * 100);
+    numbers.push(random);
+  }
+
+  const evenNumbers = numbers.filter(num => num % 2 === 0);
+
+  console.log("All Numbers:", numbers);
+  console.log("Even Numbers:", evenNumbers);
+
+  return evenNumbers;
+}
+
+generateRandomNumbers(10);
+        </code>
+     </pre>
+    <!-- Mark HTML, CSS, and PHP as abbreviations with their full title — hover to see tooltip -->
+    <abbr title="HyperText Markup Langauge">HTML</abbr>
+    <abbr title="Cascading Style Sheets">CSS</abbr>
+    <abbr title="PHP HyperText PreProcessor">PHP</abbr>
+
+    <!-- Build a mock search results page — wrap the searched word in mark wherever it appears (we have selected keyword HTML)-->
+    <div class="search-page">
+
+        <div class="search-bar">
+            <input type="text" value="HTML">
+            <button>Search</button>
+        </div>
+        <h2>Search Mock Page For Mark Tag</h2>
+        <p class="results-count">About 1,240 results for "HTML"</p>
+
+        <div class="result">
+            <h3>Learn <span>HTML</span> Basics for Beginners</h3>
+            <p>
+                This guide explains the structure of <span>HTML</span> documents, common tags,
+                and how to build simple webpages using <span>HTML</span>.
+            </p>
+        </div>
+
+        <div class="result">
+            <h3>Best Resources to Practice <span>HTML</span></h3>
+            <p>
+                Explore tutorials, exercises, and projects that help you improve
+                your <span>HTML</span> skills step by step.
+            </p>
+        </div>
+
+        <div class="result">
+            <h3><span>HTML</span> Forms and Input Elements</h3>
+            <p>
+                Understand how forms work in <span>HTML</span> and how different input fields
+                are used to collect user data on websites.
+            </p>
+        </div>
+    </div>
+    <!-- Write a math formula (x²+y²) and a chemical formula (H₂O) using sup and sub -->
+    <p>H<sub>2</sub>O</p>
+    <p>x <sup>2</sup> + y <sup>2</sup></p>
+    <!-- Mark up a blog post publish date — use datetime='2025-03-15' attribute for machine readability -->
+    <article class="blog-date">
+        <h2>Blog Title</h3>
+            <p>Post Publishing Date is <time datetime="12-12-2000">12 December 2012</time>.</p>
+            <p>Post Description</p>
+    </article>
+    <!-- Add 3 images — each must have meaningful alt text, explicit width+height, and loading='lazy' -->
+    <!-- Wrap each image in figure + figcaption — style as gallery cards using CSS Flexbox -->
+    <div class="thee-images">
+        <figure>
+            <img src="images/logo.png" alt="logo" width="150" height="150" loading="lazy">
+            <figcaption>Ab Logo</figcaption>
+        </figure>
+        <figure>
+            <img src="images/logo.png" alt="logo" width="150" height="150" loading="lazy">
+            <figcaption>Ab Logo</figcaption>
+        </figure>
+        <figure>
+            <img src="images/logo.png" alt="logo" width="150" height="150" loading="lazy">
+            <figcaption>Ab Logo</figcaption>
+        </figure>
+    </div>
+    <footer>
+        <p class="copyright-text">
+            <small>This is copyright text 2026.</small>
+        </p>
+        <!-- Build a nav with external link (rel=noopener), internal anchor link, and a mailto link -->
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="google.com" rel="nooperner">Google</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="mailto:admin@example.com">Mail us</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
