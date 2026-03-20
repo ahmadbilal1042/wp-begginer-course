@@ -25,6 +25,20 @@
             font-size: 20px;
             font-weight: 700;
         }
+
+        table {
+            position: sticky;
+            top: 0;
+            right: 0;
+        }
+
+        table tr:nth-child(even) {
+            background-color: gray;
+        }
+
+        table tr:hover {
+            background-color: rgb(255, 0, 0);
+        }
     </style>
 </head>
 
@@ -72,6 +86,64 @@
             </dl>
         </div>
     </section>
+
+    <!-- Build a pricing comparison table — write the full HTML structure before touching any CSS -->
+    <!-- Add thead to your table — make it sticky using position:sticky top:0 in CSS -->
+    <!-- Style tbody rows with alternating background using CSS :nth-child(even) -->
+    <!-- Add a totals row in tfoot — style it with bold text and a top border different from tbody -->
+     <!-- Add scope='col' to column headers and scope='row' to row headers — test with a screen reader -->
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Basic</th>
+                <th scope="col">Standard</th>
+                <th scope="col">Premium</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Price</th>
+                <td>10$</td>
+                <td>20$</td>
+                <td>30$</td>
+            </tr>
+            <tr>
+                <th scope="row">Storage</th>
+                <td>10 GB</td>
+                <td>20 GB</td>
+                <td>30 GB</td>
+            </tr>
+            <tr>
+                <th scope="row">Support</th>
+                <td>Email</td>
+                <td>Chat</td>
+                <td>Call</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total Rows</th>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div style="height: 500vh;"></div>
+
+
+    <script>
+        let rows = document.querySelectorAll("tr")
+
+
+        Array.from(rows).forEach(row => {
+            row.addEventListener("click", () => {
+                alert("Row Clicked")
+            })
+        });
+
+    </script>
 
 </body>
 
