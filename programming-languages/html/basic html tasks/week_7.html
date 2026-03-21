@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7</title>
+    <style>
+        table {
+            width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Build a weekly schedule table using colspan and rowspan for multi-day events -->
+    <figure>
+        <figcaption>My Routine Table</figcaption>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Morning</th>
+                    <td colspan="2">Team Meeting (Mon–Tue)</td>
+                    <td>Work</td>
+                    <td rowspan="2">Workshop</td>
+                    <td>Review</td>
+                </tr>
+                <tr>
+                    <th scope="row">Afternoon</th>
+                    <td>Emails</td>
+                    <td>Clients</td>
+                    <td>Development</td>
+
+                    <td>Testing</td>
+                </tr>
+                <tr>
+                    <th scope="row">Evening</th>
+                    <td>Gym</td>
+                    <td colspan="2">Project Work (Tue–Wed)</td>
+                    <td>Reading</td>
+                    <td>Wrap Up</td>
+                </tr>
+            </tbody>
+        </table>
+    </figure>
+    <!-- Build a contact form using method='post' — submit it and inspect the request in DevTools Network tab -->
+    <form action="/" method="post">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" placeholder="John" required><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="john@gmail.com" required><br>
+        <textarea name="message" id="message" cols="25" rows="6" placeholder="Write your message here"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+    <!-- Create one form using all these types: text, email, password, number, date, checkbox, radio, file, range, color -->
+    <!-- Ensure every input has a linked label — click the label text and confirm the input gets focus -->
+    <section>
+        <form action="">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name"><br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"><br>
+            <label for="pass">Password: </label>
+            <input type="password" name="pass" id="pass"><br>
+            <label for="tel">Phone: </label>
+            <input type="tel" name="tel" id="tel"><br>
+            <label for="date">Date: </label>
+            <input type="date" name="date" id="date"><br>
+            <label for="buy">Buy:</label>
+            <input type="checkbox" name="Wanna Buy" id="buy"> <br>
+            <label for="radio">Not Buy: </label>
+            <input type="radio" name="radio" id="radio"> <br>
+            <label for="file">Upload File Here:</label>
+            <input type="file" name="file" id="file"><br>
+            <label for="range">Range: </label>
+            <input type="range" name="range" id="range" min="10" max="100" value="20"><br>
+            <input type="color" name="color" id="color">Color <br>
+            <!-- Add textarea with rows and cols — control resize behavior using CSS resize:vertical
+              -->
+            <textarea name="area" id="area" cols="25" rows="10" style="resize: vertical;">Write Here</textarea>
+        </form>
+    </section>
+</body>
+
+</html>
